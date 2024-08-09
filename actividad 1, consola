@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace actividad1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string nombre;
+            string edad;
+            string fechaNac;
+            string carrera;
+            string nota1;
+            string nota2;
+            string nota3;
+
+
+            Console.WriteLine("Bienvenidos a UMI/ Universidad coppel");
+            Console.WriteLine("\nIngresa los datos.");
+
+            Console.WriteLine("\nNombre completo:");
+            nombre = Console.ReadLine();
+            Console.WriteLine("Edad:");
+            edad = Console.ReadLine();
+            Console.WriteLine("Fecha de nacimiento:");
+            fechaNac = Console.ReadLine();
+            Console.WriteLine("Carrera a la que desea ingresar:");
+            carrera = Console.ReadLine();
+
+            Console.WriteLine("\n\nGracias " + nombre + " por formar parte de UMI / UNIVERSIDAD COPPEL.\nBienvenido a la carrera " + carrera);
+
+            Console.WriteLine("\nIngresa tus notas para calcular tu promedio");
+
+            Console.WriteLine("\n\nNota 1:");
+            nota1 = Console.ReadLine();
+            Console.WriteLine("Nota 2:");
+            nota2 = Console.ReadLine();
+            Console.WriteLine("Nota 3:");
+            nota3 = Console.ReadLine();
+
+            int Resultado = Int32.Parse(nota1) + Int32.Parse(nota2) + Int32.Parse(nota3);
+            double promedio = Resultado / 3.0;
+
+            Console.WriteLine("Tu promedio es: " + promedio);
+
+            Console.ReadKey();
+            
+        }
+    }
+}
