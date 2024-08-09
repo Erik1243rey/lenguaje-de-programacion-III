@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace actividadescritorio
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnagregar_Click(object sender, EventArgs e)
+        {
+            string mensaje = txtnombre.Text;
+            string mensaje2 = txtfecha.Text;
+            string mensaje3 = txtdireccion.Text;
+            string mensaje4 = cmboxEdos.Text;
+            string mensaje5 = lblHorario.Text;
+
+         MessageBox.Show("GUARDADA LA INFORMACIÓN DE: " + mensaje + "\nCON FECHA DE NACIMIENTO EL: " + mensaje2 + "\nCON DIRECCIÓN EN: " + mensaje3 +"\nDEL ESTADO DE: "+ mensaje4+"\nHORARIO SELECCIONADO: "+ mensaje5);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if (rdbvespertino.Checked)
+            {
+                this.lblHorario.Text = "VESPERTINO";
+            }
+            if (rdbmatutino.Checked)
+            {
+                this.lblHorario.Text = "MATUTINO";
+            }
+
+
+        }
+    }
+}
